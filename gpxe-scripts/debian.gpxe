@@ -1,0 +1,4 @@
+#!gpxe
+kernel http://10.13.37.7:9090/vmlinuz boot=stateless bootif=eth0 root=http://10.13.37.7:9090/rootimg.cpio.gz
+initrd http://10.13.37.7:9090/initrd.gz
+boot
