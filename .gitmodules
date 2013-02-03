@@ -1,0 +1,3 @@
+[submodule "gpxe"]
+	path = gpxe
+	url = git@github.com:xandercrews/gpxe.git
