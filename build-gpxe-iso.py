@@ -55,7 +55,7 @@ if __name__ == '__main__':
     argparser = argparse.ArgumentParser(description='Build a gpxe ISO for template building and testing')
     argparser.add_argument('-H','--host','--scripthost', dest='gpxescripthost', metavar='H', nargs=1, type=str, default=[ '10.0.2.15:8081' ], help='the host from which to retrieve the gpxe script')
     argparser.add_argument('-u','--url','--scripturlpath', dest='gpxescripturlpath', metavar='U', nargs=1, type=str, default=[ '/gpxe/${net0/mac}' ], help='the url from which to retrieve the gpxe script from scripthost')
-    argparser.add_argument('-s', '--script', '--gpxescript', dest='gpxescript', metavar='S', type=argparse.FileType('r'), default='../gpxe-scripts/default.gpxe', help='a gpxe script mako template')
+    argparser.add_argument('-s', '--script', '--gpxescript', dest='gpxescript', metavar='S', type=argparse.FileType('r'), default='gpxe-templates/default.gpxe.tmpl', help='a gpxe script mako template')
     argparser.add_argument('-o','--output', dest='output', metavar='O', nargs=1, type=str, help='if specified, will copy the output iso to the location')
     argparser.add_argument('-f','--force', dest='force', action='store_true', default=False, help='forces overwriting of output file')
     argparser.add_argument('-v','--verbose', dest='verbose', action='store_true', default=False, help='prints verbose output')
@@ -69,7 +69,7 @@ if __name__ == '__main__':
 
     # make directory
     scriptdir = os.path.dirname(os.path.realpath(__file__))
-    makedir = os.path.realpath(os.path.join(scriptdir, '../gpxe/src'))
+    makedir = os.path.realpath(os.path.join(scriptdir, 'gpxe/src'))
     makepath = which('make')
 
     output = None
