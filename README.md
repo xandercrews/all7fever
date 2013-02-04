@@ -51,7 +51,7 @@ youj only need to do this if you want to use gPXE isos to bootstrap stateless bo
 
 * make a gpxe template or use the default.  the default template is at gpxe-scripts/default.gpxe.tmpl. the default might work unless you need to specify a different nic:
 
-    #!gpxe
+    \#!gpxe
     dhcp net0
     chain http://${host}${url}
 
