@@ -50,11 +50,10 @@ you can use virtualbox, or KVM with a VDI-backed disk.  just make sure not to us
 youj only need to do this if you want to use gPXE isos to bootstrap stateless boot.  you can alternately chainload gPXE from PXE, burn gPXE onto the option ROM, or tool up a PXE server.
 
 * make a gpxe template or use the default.  the default template is at gpxe-scripts/default.gpxe.tmpl. the default might work unless you need to specify a different nic:
-```
-#!gpxe
-dhcp net0
-chain http://${host}${url}
-```
+
+    #!gpxe
+    dhcp net0
+    chain http://${host}${url}
 
 so, it just chainloads another gpxe file at the host and url you specify to build.
 
