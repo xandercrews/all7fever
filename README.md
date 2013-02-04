@@ -37,7 +37,7 @@ you can use virtualbox, or KVM with a VDI-backed disk.  just make sure not to us
 * make sure the vdi is unmounted from where you were cutting it, first.  it should not modify anything so don't worry brah.  i'm not responsible for the injurious effects of any of the software i wrote (and they are many).
 
 * run the converter
-    
+   ./doit.py ~/VirtualBox\ VMs/debian/debian.vdi output/
 
 ### create a gpxe iso ###
 
