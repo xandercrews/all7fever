@@ -28,18 +28,18 @@ instructions
     git submodule init
     git submodule update
 
-=== create a base image ===
+### create a base image ###
 
 you can use virtualbox, or KVM with a VDI-backed disk.  just make sure not to use LVM, or encryption or anything, since the stateless converter doesn't support it.
 
-=== convert the vdi to a stateless image ===
+### convert the vdi to a stateless image ###
 
 * make sure the vdi is unmounted from where you were cutting it, first.  it should not modify anything so don't worry brah.  i'm not responsible for the injurious effects of any of the software i wrote (and they are many).
 
 * run the converter
     
 
-=== create a gpxe iso ===
+### create a gpxe iso ###
 
 youj only need to do this if you want to use gPXE isos to bootstrap stateless boot.  you can alternately chainload gPXE from PXE, burn gPXE onto the option ROM, or tool up a PXE server.
 
